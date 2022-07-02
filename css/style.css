@@ -104,6 +104,12 @@ ul {
 .link-nav.current {
   color: var(--accent-color);
 }
+.current::before {
+  content: "";
+  width: 48px;
+  height: 4px;
+  display: inline-block;
+}
 .contact {
   display: flex;
   margin-left: auto;
