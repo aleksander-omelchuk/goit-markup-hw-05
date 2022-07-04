@@ -121,10 +121,8 @@ ul {
   bottom: 0;
   left: 0;
   border-radius: 2px;
-  transform: translateY(2px);
   background-color: var(--accent-color);
 }
-
 .contact {
   display: flex;
   margin-left: auto;
@@ -203,6 +201,9 @@ ul {
   border: none;
   padding: 10px 32px;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover {
   background-color: var(--accent-background-color);
