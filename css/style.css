@@ -251,7 +251,34 @@ ul {
 .our-work {
   display: flex;
 }
+.our-work-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.link-work:hover .our-work-overlay {
+  transform: translateY(0);
+}
+.overlay-desk {
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .link-work {
+  position: relative;
+  overflow: hidden;
   margin-right: 30px;
 }
 .link-work:last-child {
@@ -529,9 +556,24 @@ ul {
 }
 .link-card {
   display: block;
+  position: relative;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.overlay-desk-card {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: rebeccapurple;
 }
 .link-card:hover,
 .link-card:focus {
