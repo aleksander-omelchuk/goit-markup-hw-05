@@ -115,6 +115,7 @@ ul {
 
   position: relative;
 }
+
 .current::after {
   content: "";
   width: 100%;
@@ -124,6 +125,7 @@ ul {
   bottom: 0;
   left: 0;
   border-radius: 2px;
+  transform: translateY(2px);
   background-color: var(--accent-color);
 }
 .contact {
@@ -561,22 +563,35 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.overlay-card {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.overlay-desk-card {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
-  letter-spacing: 0.03em;
-  color: rebeccapurple;
-}
 .link-card:hover,
 .link-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.description-card::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--main-background-color);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.overlay-desk-card {
+  font-family: "Roboto";
+  font-style: normal;
+  width: 100%;
+  height: 294px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 63px 24px;
 }
