@@ -97,6 +97,9 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-nav:hover,
 .link-nav:focus {
@@ -330,6 +333,10 @@ ul {
   border-radius: 50%;
   background-color: #ffffff;
   color: #afb1b8;
+  fill: currentColor;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-link:hover .social-media-icon,
 .social-media-link:focus .social-media-icon {
@@ -339,9 +346,6 @@ ul {
 .social-media-link:focus {
   fill: var(--main-background-color);
   background-color: var(--accent-color);
-}
-.social-media-link {
-  fill: currentColor;
 }
 /* наші клієнти */
 .section.сlient {
@@ -366,6 +370,9 @@ ul {
   border: 1px solid #afb1b8;
   color: #afb1b8;
   border-radius: 4px;
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-link {
   fill: currentColor;
@@ -400,7 +407,11 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   color: var(--main-background-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link-address {
   margin-bottom: 9px;
 }
@@ -411,7 +422,15 @@ ul {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.link-footer:hover,
+.link-footer:focus {
+  color: var(--accent-color);
+}
+
 .footer-social {
   margin-left: 70px;
 }
@@ -449,6 +468,9 @@ ul {
   cursor: pointer;
   padding: 0;
   height: 38px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link .link-btn {
   margin-right: 8px;
@@ -507,6 +529,9 @@ ul {
 }
 .link-card {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-card:hover,
 .link-card:focus {
