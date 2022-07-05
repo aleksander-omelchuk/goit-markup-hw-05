@@ -33,6 +33,9 @@ img {
   height: auto;
 }
 /* --змінна flex-- */
+.no-scroll {
+  overflow: hidden;
+}
 .card-set {
   display: flex;
   flex-wrap: wrap;
@@ -108,11 +111,11 @@ ul {
 .link-nav.current {
   color: var(--accent-color);
 }
+
 .site-nav .link-nav {
   display: block;
   padding-top: 33px;
   padding-bottom: 32px;
-
   position: relative;
 }
 
@@ -213,6 +216,55 @@ ul {
 .button:hover {
   background-color: var(--accent-background-color);
 }
+/* modal window */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--main-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: var(--main-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
 /* section особливості */
 .visually-hidden {
   position: absolute;
@@ -276,6 +328,8 @@ ul {
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  padding: 27px 82px;
   color: #ffffff;
 }
 .link-work {
@@ -578,15 +632,12 @@ ul {
   top: 0;
   left: 0;
   transform: translateY(100%);
-  transition-property: transform, box-shadow;
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9);
 }
 .desk-card {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
